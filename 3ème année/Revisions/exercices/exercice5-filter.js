@@ -153,3 +153,12 @@ const eachWordMaxChar = sentenceArray2.forEach((word) => {
 // Vous ne compterez pas les espaces comme un caractère.
 // Indication : utilisez la méthode split pour transformer la chaîne de
 // caractères en tableau.
+
+function getEachWordMaxChar(sentence) {
+  const result = [];
+  sentence.split(" ").forEach((word) => {
+    result.push({ word, wordLength: word.length });
+  });
+  return result;
+}
+console.log(getEachWordMaxChar("Lorem ipsum test"));
